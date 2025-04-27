@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Clima en tu ciudad</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #d0e8f2;
+      text-align: center;
+      padding-top: 50px;
+    }
+    .weather-box {
+      background: white;
+      display: inline-block;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+    .temperature {
+      font-size: 2em;
+      color: #0077b6;
+      margin-top: 10px;
+    }
+    input, button {
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+      border: 1px solid #aaa;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Buscá el clima de cualquier ciudad</h1>
+
+<!-- Cuadro de texto para la ciudad -->
+<input type="text" id="ciudadInput" placeholder="Ingresá una ciudad...">
+<button onclick="buscarClima()">Buscar</button>
+
+<!-- Acá aparece el clima -->
+<div id="resultado" class="weather-box" style="display:none;">
+  <h2>Clima en <span id="city">...</span></h2>
+  <p class="temperature"><span id="temp">...</span> °C</p>
+</div>
+
+<script>
+const apiKey = "1b3ee28045a9468db1a151046252704"; // Tu API Key
+const nombre = "Bautista";  // Tu nombre
+const apellido = "Camiño"; // Tu apellido
+
+function buscarClima() {
+  const ciudad = document.getElementById("ciudadInput").value.trim();
+  if (ciudad === "") {
+    alert("Por favor ingresá una ciudad.");
+    return;
+  }
+
+  // Acá metemos nombre y apellido en el URL como parámetro
+  const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${ciudad}&nombre=${nombre}&apellido=${apellido}`;
+
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("resultado").style.display = "block";
+      document.getElementById("city").innerText = data.location.name;
+      document.getElementById("temp").innerText = data.current.temp_c;
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      alert("No se pudo obtener el clima. ¿La ciudad está bien escrita?");
+    });
+}
+</script>
+
+</body>
+</html>
+
