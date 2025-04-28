@@ -58,7 +58,7 @@ function buscarClima() {
   }
 
   // Acá metemos nombre y apellido en el URL como parámetro
-  const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${ciudad}&nombre=${nombre}&apellido=${apellido}`;
+  const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${ciudad}&nombre=${nombre}&apellido=${apellido}`;
 
   fetch(url)
     .then(response => response.json())
