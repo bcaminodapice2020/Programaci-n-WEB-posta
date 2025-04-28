@@ -46,7 +46,7 @@
 </div>
 
 <script>
-const apiKey = "1b3ee28045a9468db1a151046252704"; // Tu API Key
+const apiKey = "8197bb97cf0b476abf5152614252804"; // Tu API Key
 const nombre = "Bautista";  // Tu nombre
 const apellido = "Camiño"; // Tu apellido
 
@@ -58,7 +58,8 @@ function buscarClima() {
   }
 
   // Acá metemos nombre y apellido en el URL como parámetro
-  const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${ciudad}&nombre=${nombre}&apellido=${apellido}`;
+  const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${ciudad}`;
+
 
   fetch(url)
     .then(response => response.json())
