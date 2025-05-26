@@ -9,54 +9,59 @@
     <body>
         <header>
             <h1>Eleka Kinesiología</h1>
-            <nav>
-                <ul>
-                    <li><a href="#servicios"></a></li>
-                    <li><a href="#profesionales"></a></li>
-                    <li><a href="#turnos"></a></li>
-                    <li><a href="#contacto"></a></li>
-                </ul>
-            </nav>
+            <p>Tu bienestar en manos profesionales</p>
         </header>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#equipo">Equipo</a>
+            <a href="#contacto">Contacto</a>
+            <a href="#turno">Reservar Turno</a>
+        </nav>
+        <section id="inicio">
+            <h2>Bienvenidos a Eleka</h2>
+            <p>Somos una clínica dedicada a la <strong>Rehabilitación Deportiva</strong> y a la <strong>Kinesiología Integral</strong>.Te acompañamos en cada paso hacia tu recuperación</p>
+            <img src="img/pruebaeleka.jpg" alt="Imagen 1"
+        </section>
         <section id="servicios">
             <h2>Servicios</h2>
             <ul>
-                <li>Kinesiología Deportiva</li>
-                <li>Rehabilitación postoperatoria</li>
+                <li>Kinesiología Integral</li>
+                <li>Rehabilitación Deportiva</li>
+            </ul>
+            <p><strong>Horarios de atención:</strong> Lunes a Viernes de 8:00 a 13:00 y de 14:00 a 20:00</p>
+        </section>
+
+        <section id="equipo">
+            <h2>Nuestro equipo</h2>
+            <p>Contamos con profesionales capacitados comprometidos con tu salud.</p>
+            <ul>
+                <li>Leonardo César García</li>
+                <li>Solana García Marelli</li>
+                <li>Patricia Oliveros</li>
+                <li>Micaela Barrionuevo</li>
+                <li>Julián Rodero</li>
             </ul>
         </section>
 
-        <section id="profesionales">
-            <h2>Profesionales</h2>
-            <p><strong>Leonardo Garcia</strong></p>
-            <p><strong>Solana Garcia</strong></p>
-        </section>
-
-        <section id="turnos">
-            <h2>Reservá tu turno</h2>
-            <form id="form-turno">
-                <label for="nombre">Nombre completo:</label>
-                <input type="text" id="nombre" name="nombre" required>
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="fecha">Fecha del turno:</label>
-                <input type="date" id="fecha" name="fecha" required>
-
-                <label for="mensaje">Motivo de la consulta:</label>
-                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
-                <button type="submit">Solicitar turno</button>
-            </form>
-        </section>
-
         <section id="contacto">
-            <h2>contacto</h2>
+            <h2>Contacto</h2>
             <p><strong>Dirección:</strong>Av. Lope de Vega 1336, CABA</p>
-            <p><strong>Horario:</strong>Lunes a Viernes de 8:00 a 13:00 y de 14:00 a 20:00</p>}
-            <p><strong>Teléfono:</strong>Av. Lope de Vega 1336, CABA</p>
-            <p><strong>Email:</strong>Av. Lope de Vega 1336, CABA</p>
-            <p><strong>Redes Sociales:</strong>Av. Lope de Vega 1336, CABA</p>
+            <p><strong>Teléfono Fijo:</strong>3981-6866</p>
+            <p><strong>Whatsapp:</strong>15-5870-1081</p>
+            <p><strong>Email:</strong>elekakinesiologiavirgilio@gmail.com</p>
+            <p><strong>Instagram:</strong>eleka_kinesiologia</p>
+        </section>
+
+        <section id="turno">
+            <h2>Reservá tu turno</h2>
+            <form action="#" method="post">
+                <input type="text" name="nombre" placeholder="Nombre completo" required>
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+                <input type="tel" name="telefono" placeholder="Teléfono" >
+                <textarea name="mensaje" placeholder="Motivo de la consulta" rows="4" required></textarea>
+                <button type="submit">Enviar solicitud</button>
+            </form>
         </section>
 
         <footer>
