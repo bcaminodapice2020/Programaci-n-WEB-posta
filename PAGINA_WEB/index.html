@@ -17,11 +17,12 @@
             <a href="#equipo">Equipo</a>
             <a href="#contacto">Contacto</a>
             <a href="#turno">Reservar Turno</a>
+            <a href="#imagenes">Galería</a>
         </nav>
         <section id="inicio">
             <h2>Bienvenidos a Eleka</h2>
             <p>Somos una clínica dedicada a la <strong>Rehabilitación Deportiva</strong> y a la <strong>Kinesiología Integral</strong>.Te acompañamos en cada paso hacia tu recuperación</p>
-            <img src="img/pruebaeleka.jpg" alt="Imagen 1"
+            <img src="img/hall.jpeg" alt="Entrada de la clínica">
         </section>
         <section id="servicios">
             <h2>Servicios</h2>
@@ -30,6 +31,7 @@
                 <li>Rehabilitación Deportiva</li>
             </ul>
             <p><strong>Horarios de atención:</strong> Lunes a Viernes de 8:00 a 13:00 y de 14:00 a 20:00</p>
+            <img src="img/lobby1.jpeg" alt="Zona de Rehabilitación 1">
         </section>
 
         <section id="equipo">
@@ -55,17 +57,37 @@
 
         <section id="turno">
             <h2>Reservá tu turno</h2>
-            <form action="#" method="post">
-                <input type="text" name="nombre" placeholder="Nombre completo" required>
-                <input type="email" name="email" placeholder="Correo electrónico" required>
-                <input type="tel" name="telefono" placeholder="Teléfono" >
-                <textarea name="mensaje" placeholder="Motivo de la consulta" rows="4" required></textarea>
-                <button type="submit">Enviar solicitud</button>
+            <form id="form-turno">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required>
+                <button type="submit">Reservar turno</button>
             </form>
+            <div id="mensaje-confirmacion"></div>
+        </section>
+
+        <section id="imagenes">
+            <h2>Galería</h2>
+            <img src="img/lobby2.jpeg" alt="Zona de Rehabilitación 2">
+            <img src="img/lobby3.jpeg" alt="Zona de Rehabilitación 2">
+            <img src="img/lobby4.jpeg" alt="Zona de Rehabilitación 2">
+            <img src="img/hab1.jpeg" alt="Foto camilla 1">
+            <img src="img/hab2.jpeg" alt="Foto camilla 2">
+            <img src="img/hab3.jpeg" alt="Foto camilla 3">
         </section>
 
         <footer>
             <p>&copy; 2025 Eleka Kinesiología. Todos los derechos reservados</p>
         </footer>
+
+        <script src="script.js"></script>
+
+
+
     </body>
 </html>
